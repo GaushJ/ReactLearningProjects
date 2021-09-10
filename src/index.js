@@ -7,20 +7,25 @@ import Data from './Data'
 
 
 
+const sdata = (value) => {
+    return(
+        <Card 
+            image= {value.image}
+            category = {value.category}
+            title = {value.title}
+            link = {value.link}
+        />  
+    )
+        
+    
+}
+
 ReactDOM.render(
 <>
-<section className = "section">
+
 <Header />
+{Data.map(sdata)}
 
-<Card 
-image= {Data[0].image}
-category = {Data[0].category}
-title = {Data[0].title}
-link = {Data[0].link}
-/>      
-
-Data.map()
-</section> 
 </>,
 document.getElementById('root')
 );
